@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Project Budget Control</title>
+<style>
+body{
+    font-family:Arial,sans-serif;
+    max-width:720px;
+    margin:0 auto;
+    padding:40px 20px;
+    line-height:1.6;
+}
+h1{font-size:38px;line-height:1.15}
+.card{
+    border:1px solid #ddd;
+    border-radius:14px;
+    padding:24px;
+    margin-top:24px;
+}
+input,button{
+    width:100%;
+    box-sizing:border-box;
+    padding:14px;
+    margin-top:10px;
+    font-size:16px;
+}
+button{cursor:pointer}
+.small{color:#666}
+</style>
+</head>
+
+<body>
+
+<h1>Stop losing track of project costs.</h1>
+
+<p>
+Track your project budget, costs, hours and remaining value
+in one focused workspace.
+</p>
+
+<div class="card">
+<h2>Would this solve a real problem for you?</h2>
+
+<p>
+We are testing a simple tool for people who regularly
+go over budget or lose track of project costs.
+</p>
+
+<form onsubmit="return submitInterest(event)">
+<input
+    id="email"
+    type="email"
+    placeholder="Your email"
+    required
+>
+<button type="submit">
+Join the early test
+</button>
+</form>
+
+<p id="message" class="small"></p>
+</div>
+
+<script>
+function submitInterest(event){
+    event.preventDefault();
+
+    const email =
+        document.getElementById("email").value;
+
+    document.getElementById("message").textContent =
+        "Interest recorded locally for this test: " + email;
+
+    return false;
+}
+</script>
+
+</body>
+</html>
